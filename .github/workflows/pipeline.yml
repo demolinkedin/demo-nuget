@@ -38,7 +38,7 @@ jobs:
 
 # inclua um dotnet nugeet add source para o github artifacts
     - name: Add GitHub Packages Source
-      run: dotnet nuget add source https://nuget.pkg.github.com/demolinkedin/index.json --name github --username demolinkedin --password ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget add source https://nuget.pkg.github.com/demolinkedin/index.json --name github --username demolinkedin --store-passwor-in-clear-text --password ${{ secrets.GITHUB_TOKEN }}
 
 # inclua um dotnet nuget push para o github artifacts
     - name: Push to GitHub Packages
